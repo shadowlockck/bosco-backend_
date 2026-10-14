@@ -14,6 +14,8 @@ docker compose up --build
 
 Застосунок буде доступний за адресою <http://localhost:8000/>.
 Міграції виконуються автоматично при старті контейнера.
+Docker запускає Django з параметром `--insecure`, щоб static-файли (CSS)
+працювали навіть при `DJANGO_DEBUG=0`.
 
 База SQLite зберігається в Docker volume `django_data` і не втрачається після
 перезапуску контейнера.
