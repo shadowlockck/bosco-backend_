@@ -21,6 +21,7 @@ from wareapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
-    path('products/', products, name="products")
+    path('products/', products, name="products"),
+    path("new/", product_create, name="product_create"),
 
 ]

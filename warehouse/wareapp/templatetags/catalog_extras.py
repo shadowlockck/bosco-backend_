@@ -21,6 +21,10 @@ def ukrainian_plural(value, forms):
         return forms[1]
     return forms[2]
 
+def product_count():
+    from ..models import Product
+
+    return Product.objects.count()
 
 @register.filter
 def uah(value):
